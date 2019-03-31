@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="beanPostProcessor" class="com.javaee.spring.MyBeanPostProcessor">
+    </bean>
+    <!--配置BeanFactory的后置处理器-->
+    <bean id="beanFactoryPostProcessor" class="com.javaee.spring.MyBeanFactoryPostProcessor">
+    </bean>
+    <bean id="studentBean" class="com.javaee.spring.StudentBean" init-method="myInit" scope="singleton">
+        <property name="name" value="qijichao"></property>
+        <property name="age" value="22"></property>
+    </bean>
+
+</beans>
